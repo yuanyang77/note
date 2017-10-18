@@ -1,0 +1,4 @@
+GOOS=linux go build -o hello.linux hello.go        #编译成在linux下允许的可执行程序
+GOOS=windows go build -o hello.exe hello.go      #编译成在windows下的可执行程序
+GOOS=darwin go build -o hello.mac  hello.go       #编译成在mac下的可执行程序
+ 
