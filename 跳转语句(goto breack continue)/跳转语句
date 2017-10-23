@@ -1,0 +1,62 @@
+跳转语句goto, break, continue
+
+三个语法都可以配合标签使用
+标签名区分大小写，若不使用会造成编译错误
+Break与continue配合标签可用于多层循环的跳出
+Goto是调整执行位置，与其它2个语句配合标签的结果并不相同
+
+
+1、break语句
+   //break语句可以直接跳出多层循环到定义的标签的同一层。
+   break + 标签
+    package main
+
+	import "fmt"
+
+	func main() {
+	LABEL1:
+		for {
+			for i := 0;i < 10;i++ {
+				if i > 3 {
+					break LABEL1   //这里使用break，可以直接跳出多层循环到LABLE同一层。
+				}
+			}
+		}
+		fmt.Println("OK")
+	}
+	
+2、goto语句
+    //goto语句用于调整循环执行的位置到，调整到从标签的位置开始执行。
+	注意：如果要用goto去结束死循环，一定要把标签放到for循环的后面，而不能放到前面。
+		package main
+
+		import "fmt"
+
+		func main() {
+
+			for {
+				for i := 0; i < 10; i++ {
+					if i > 3 {
+						goto LABEL1
+					}
+				}
+			}
+		LABEL1:   //这里如果像上面break那样把LABEL1放到前面，goto会调整执行位置到前面，然后继续运行for循环，最后还是一个死循环。
+			fmt.Println("OK")
+		}
+		
+3、continue语句
+   //continue语句用于跳过当前循环，配合标签可以跳过当前循环去执行标签所在层的循环。
+	   package main
+
+		import "fmt"
+
+		func main() {
+		LABEL1:
+			for i := 0; i < 10; i++ {
+				for {
+						continue LABEL1  //这里，continue会跳过当前循环去执行LABEL1所在同一层的外层循环。
+					}
+			}
+			fmt.Println("OK")
+		}

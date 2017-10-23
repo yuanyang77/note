@@ -1,0 +1,55 @@
+GO的循环语句
+
+Go只有for一个循环语句关键字，但支持3种形式
+初始化和步进表达式可以是多个值
+条件语句每次循环都会被重新检查，因此不建议在条件语句中
+使用函数，尽量提前计算好条件并以变量或常量代替
+左大括号必须和条件语句在同一行
+
+
+1、for循环第一种形式：
+    for {
+	}
+	//没有结束语句和表达式，是一个无限循环，需要借助break退出循环。
+
+	
+	
+2、for循环的第二种形式：
+	for init; condition; post { }
+   //在循环中初始化条件，给变量赋值。
+   
+	package main
+
+	import "fmt"
+
+	func main() {
+		a := 1
+		for {
+			a++
+			if a > 3 {
+				break
+			}
+			fmt.Println(a)
+		}
+		
+		for a <=3 {
+		a++
+		fmt.Println(a)
+	    }
+	}
+	
+3、for循环的第三种形式：
+   for condition { }
+   //满足循环有循环退出条件，当条件满足时候退出循环。
+	package main
+
+	import "fmt"
+
+	func main() {
+		a := 1
+		for i := 0; i < 3; i++ {
+			a++
+			fmt.Println(a)
+		}
+		fmt.println("Over")
+	}

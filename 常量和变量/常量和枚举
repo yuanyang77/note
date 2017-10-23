@@ -1,0 +1,115 @@
+1、单个常量的声明与赋值方法
+
+	1）常量的声明格式：const   常量名称   常量类型
+	   常量的赋值格式：常量名称  =  表达式
+		const a int
+		a = 10
+		
+
+
+	2）声明的同时赋值：const 常量名称 [常量类型] = 表达式
+	    const a int = 10
+		const b string = "abc hello"
+		
+	3）声明常量和赋值，不指定类型
+		const a = 10  //这种不指定类型的方式，系统会通过赋值自动推导出类型
+		const b = flase
+	
+2、多个常量的声明与赋值
+   注意：局部常量不可以使用 const() 的方式简写，只能使用并行方式
+
+	1）全局常量的声明可使用 const() 的方式进行简写
+	   //同时声明多个常量，并在后面赋值
+			const (                           
+			aa bool
+			bb int
+			cc float64
+			dd uint32
+			ff int
+		    )
+			aa, bb, cc, dd, ff = true, 10, 1.22, 3, 10
+			
+	   //同时声明多个常量并给常量赋值
+			const (                 
+			aaa = "hello"
+			sss,bbb = 1, 2
+			)
+			
+	   //同时声明多个常量并给常量赋值并指定类型
+	        const (
+			a int = 10
+			b bool = true
+			c string = "hello"
+			)
+			
+	2）全局常量的声明不可以省略 const，但可使用并行方式
+	   
+		const a, b, c, d int        //使用并行的方法同时声明多个常量的声明
+		a, b, c, d = 1, 2, 3, 4   //使用并行的方法给多个常量的赋值
+		
+		const e, f, g, h int = 5, 6, 7, 8  //多个常量声明的同时赋值
+	
+	3）所有常量都可以使用类型推断
+	
+		//多个常量声明，省略了常量类型，由系统自动推导
+		const i, j, k, l = 9, 10, 11, 12   
+	
+	4）多个常量声明与赋值最简单的写法，省略了const关键字和类型。
+	   注意：这种方法只能在局部常量中使用，不能在全局常量中使用。
+	    i, m, n, o := 13, 14, 15, 16
+	    
+		
+3、常量的初始化规则与枚举
+
+	在定义常量组时，如果不提供初始值，则表示将使用上行的表达式
+	使用相同的表达式不代表具有相同的值
+	iota是常量的计数器，从0开始，组中每定义1个常量自动递增1
+	通过初始化规则与iota可以达到枚举的效果
+	每遇到一个const关键字，iota就会重置为0
+
+	const (
+	a = "A"
+	b 
+	c = iota
+	d //d的值为3
+	)
+	
+	const (
+	e = iota   //iota默认从0开始计数
+	f //f 的值为1
+	)
+
+	//栗子1
+	const (
+	//第一个常量是不可省略表达式的
+	Monday = iota
+	Tuesday
+	Wednesday
+	Thursday
+	Friday
+	Saturday
+	Sunday
+	)
+	
+	//栗子2
+	package main
+
+	import "fmt"
+
+	const (
+		B  float64 = 1 << (iota * 10) //iota从0开始，所以这里是0 * 10 = 0，<<是左移位运算，这里相当于1 x 2的0次方
+		KB                            //常量如果没有赋值就是会直接引用上面的值，这里iota变成了1，1 * 10 = 10，把1左移10位，相当于1 x 2的10次方。
+		MB                            //后面如此类推。
+		GB
+		TB
+		PB
+	)
+
+	func main() {
+		fmt.Println(B)
+		fmt.Println(KB)
+		fmt.Println(MB)
+		fmt.Println(GB)
+		fmt.Println(TB)
+		fmt.Println(PB)
+    }

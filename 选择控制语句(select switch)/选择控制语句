@@ -1,0 +1,63 @@
+控制语句
+go的控制语句有bareak、continue、goto
+
+
+1、switch
+  1）switch和case的第一种用法
+     //在switch中指定表达式；
+	 注意：只要一个case的表达式满足了，就不会再去执行后面的表达式。
+		package main
+
+		import "fmt"
+
+		func main() {
+			a := 1
+			switch a {                //在switch中指定表达式
+			case 0:
+				fmt.Println("a=0")
+			case 1:
+				fmt.Println("a=1")
+			default:
+				fmt.Println("None")
+			}
+		}
+		
+   2）switch和case的第二种用法
+      //不在switch中指这表达式，在case中指定。
+	  注意：只要一个case的表达式满足了，就不会再去执行后面的表达式。
+	  如果想要它执行后面的表达式，需要加一个fallthrough
+		package main
+	
+		import "fmt"
+
+		func main() {
+			a := 1
+			switch  {
+			case a >= 0:                    //不在switch中指这表达式，在case中指定
+				fmt.Println("a=0")
+				fallthrough
+			case a >= 1:
+				fmt.Println("a=1")
+			default:
+				fmt.Println("None")
+			}
+		}
+		
+    3）switch和case的第三种用法
+	 //在switch和case中同时加入表达式
+	 注意：在switch中定义的变量，作用域只在switch中。
+		package main
+
+		import "fmt"
+
+		func main() {
+			switch a := 1;  {              //在switch和case中同时加入表达式
+			case a >= 0:
+				fmt.Println("a=0")
+				fallthrough
+			case a >= 1:
+				fmt.Println("a=1")
+			default:
+				fmt.Println("None")
+			}
+		}
