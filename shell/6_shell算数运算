@@ -1,0 +1,128 @@
+1.算术运算：
+	+, -, *, /, %, **
+
+(1) $[$A+$B]
+(2) $(($A+$B))
+(3) let VARIABLE=$A+$B， 例如 let sum=$a+$b
+(4) VARIABLE=$(expr $A + $B)
+(5)expr $A + $B
+(6) bc
+
+
+2.运算符：
+	++ --  		增加或减少，（符号在变量前，先输出运算后的结果，符号在变量后，则先输出变量原来的值）
+	+ - ! ~  	一元的正号与负号、逻辑与位的取反
+	* / %  		乘法、除法、取余
+	**  		次方
+	+ -  		加法、减法
+	< <= > >=  	比较符号
+	== !==  	等于、不等于 （与=不同，=是赋值，==是判断）
+	<<  >>  	向左位移、向右位移
+	&  		位的and
+	^  		位的异或
+	|  		位的或
+	&&  		逻辑的and
+	||  		逻辑的or
+	?:  		条件表达式
+	=、 +=、 -=、 *=、 /=、 %=、 &=、 ^=、 <<=、 >>=、 |=  d
+	赋值运算符 a+=1 相当于 a=a+1
+
+
+示例：求100以内所有正整数之和；
+	#!/bin/bash
+	#
+	declare -i sum=0
+
+	for i in {1..100}; do
+	   sum=$[$sum+$i]
+	done
+
+	echo $sum
+
+练习：求100以内所有偶数之和；
+	使用至少三种方法实现；
+
+	#!/bin/bash
+	#
+	declare -i sum=0
+
+	for i in $(seq 0 2 100); do
+	    sum=$(($sum+$i))
+	done
+
+	echo "Even sum: $sum."
+
+
+	#!/bin/bash
+	#
+	declare -i sum=0
+
+	for i in {1..100}; do
+	    if [ $[$i%2] -eq 0 ]; then
+		sum=$[$sum+$i]
+	    fi
+	done
+
+	echo "Even sum: $sum."
+
+3.增强型赋值：
+	+=
+		sum=$[$sum+$i]
+		let sum+=$i
+
+	-=, *=, /=, %=
+
+		let count=$[$count+1]   --> let count+=1 --> let count++
+		let count=$[$count-1] --> let count-=1 --> let count--
+
+示例：显示/etc目录下所有普通文件列表，而后统计一共有多少个文件；
+
+	#!/bin/bash
+	#
+	declare -i count=0
+
+	for file in /etc/*; do
+	    if [ -f $file ]; then
+		 	let count++
+			echo "$count $file"
+    	    fi
+	done
+
+	echo "Total: $count files."
+
+
+4.bc的用法：
+bc的独有特点是支持小数运算：
+# echo 1.1+1.7 | bc
+2.8
+ 
+# echo 5.8-1.6 | bc
+4.2
+ 
+# echo 2.5*3.0 | bc
+7.5
+# echo 2.5/.25 | bc
+10
+ 
+bc还支持不同进制数据的转换：
+ 
+十进制7转换为二进制：
+# echo "obase=2;7" | bc
+111
+ 
+十进制15转换为16进制：
+# echo "obase=16;15" | bc
+F
+ 
+示例：
+通过命令输出1+2+3..+10的表达式，并计算结果,输出内容如：1+2+3+4+5+6+7+8+9+10=xx
+ 
+# echo `seq -s '+' 10`=`seq -s"+" 10 | bc`
+1+2+3+4+5+6+7+8+9+10=55
+ 
+# echo "`seq -s '+' 10`="$((`seq-s "+" 10`))
+1+2+3+4+5+6+7+8+9+10=55
+ 
+# echo `seq -s '+' 10`=`seq -s " +" 10 | xargs expr`
+1+2+3+4+5+6+7+8+9+10=55
+

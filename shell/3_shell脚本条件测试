@@ -1,0 +1,265 @@
+一、条件测试：
+	界定程序执行环境；
+
+1、根据运行的命令的状态结果；
+例：id user1  &> /dev/null
+例：!id user1 &> /dev/null
+
+2、测试表达式三种写法：
+	(1)test EXPRESSION
+	(2)[ EXPRESSION ]
+	(3)[[ EXPRESSION ]]
+
+3、条件测试分类
+1)整数测试：隐含着做数值大小比较，所以不要给变量引用加引用；
+	$A -gt $B：是否大于；是则为“真”，否则为“假”；
+	$A -ge $B: 是否大于等于；
+	$A -lt $B：是否小于；
+	$A -le $B: 是否小于等于；
+	$A -eq $B: 是否等于；
+	$A -ne $B：是否不等于；
+
+2)字符串测试：ASCII数值越大，字符比较时其值越大；
+	"$A" > "$B"：是否大于；
+	"$A" < "$B"：是否小于；
+	"$A" == "$B"：是否等于；
+	"$A" != "$B"：是否不等于；
+	-z "$A"：是否为空；空则为“真”，否则为“假”
+	-n "$A"：是否不空；不空则“真”，空则为“假”
+	=~：左侧字符串能否被右侧模式所匹配。
+	注意：应该使用[[ EXPRESSION ]]
+
+3)文件测试：测试文件的存在性以及属性；
+	-e $file: 是否存在；存在则为“真”，否则为“假”；
+	-a $file: 同上；
+	-f $file：文件是否存在且为普通文件；
+	-d $file：文件是否存在且为目录；
+	-h $file：是否存在且为符号链接文件；
+	-L $file: 同上
+	-b $file：是否存在且为块设备文件；
+	-c $file：是否存在且为字符设备文件；
+	-S $file：是否存在且为套接字文件；
+	-p $file: 是否存在且为管道文件；
+
+	     测试文件的存在性以及权限；
+	-r $file: 当前用户对文件是否拥有读权限；
+	-w $file：当前用户对文件是否拥有写权限；
+	-x $file：当前用户对文件是否拥有执行权限；
+
+	-u $file：文件是否拥有SUID权限；
+	-g $file：文件是否拥有SGID权限；
+	-k $file：文件是否拥有sticky权限；
+
+	-O $file: 当前用户是否为指定文件的属主；
+	-G $file: 当前用户是否为指定文件的属组；
+	
+	-N $file:文件自从上一次被读取之后，是否被修改过。
+
+4）双目操作符：
+	$file1 -nt $file2: file1是否新于file2, file1的最近一次的修改时间戳是否晚于file2的；
+	$file1 -ot $file2: file1是否旧于file2, file1的最近一次的修改时间戳是否早于file2的； 
+	$file1 -ef $file2：file1与file2是否指向了同一个inode；测试二者是否为同一个文件的硬链接；
+
+二、测试表达式：
+	整数测试：-gt, -lt, -ge, -le, -eq, -ne
+	字符串测试：==, >, <, !=, -z, -n, =~
+注意：
+	(1) 字符串等值比较测试：[ "$hostname" == 'localhost'  ]
+	(2) 模式匹配测试：[[ "STRING" =~ PATTERN ]]
+
+组合测试条件：
+条件间逻辑运算：
+	与：多个条件要同时满足；
+	或：多个条件满足其一即可；
+	非：对指定的条件取反；
+
+表达式组合：
+	与：[[ CONDITION1 -a CONDITION2 ]]
+	或：[[ CONDITION1 -o CONDITION2 ]]
+	非：[ ! CONDITION ]
+
+命令组合：
+	与：COMMAND1 && COMMAND2  <-- [ EXPR1 ] && [ EXPR2 ] 
+	或：COMMAND1 || COMMAND2
+	非：! COMMAND
+
+短路操作符：&&
+	false && true = false
+	false && false = false
+
+	true && false = true
+	true && true = true
+
+	if COMMAND1; then
+		COMMAND2
+	fi
+
+短路操作符：||
+	true || true = true
+	true || false = true
+
+	false || true = true
+	false || false = false
+
+	if ! COMMAND1; then
+		COMMAND2
+	fi
+
+	COMMAND1 && COMMAND2 || COMMAND3
+		if COMMAND1; then
+			COMMAND2
+		else
+			COMMAND3
+		fi
+
+
+示例：写一个脚本实现如下功能；
+	获取当前主机的主机名；
+		如果当前主机的主机名为空，或者为localhost，则将其修改为www.magedu.com
+	#!/bin/bash
+	#
+	hostname=$(hostname)
+
+	if [ -z "$hostname" -o "$hostname" == "localhost" ]; then
+	    hostname www.magedu.com
+	fi
+
+		练习：写一个脚本
+			(1) 传递两个文本文件路径给脚本；
+			(2) 显示两个文件中空白行数较多的文件及其空白行的个数；
+			(3) 显示两个文件中总行数较多的文件及其总行数；
+
+		练习：写一个脚本
+			(1) 提示用户输入一个字符串；
+			(2) 判断：
+				如果输入的是quit，则退出脚本；
+				否则，则显示其输入的字符串内容；
+
+		练习：写一个脚本，打印九九乘法表；
+
+			循环嵌套
+
+			1X1=1
+			1X2=2 2X2=4
+			1X3=3 2X3=6 3X3=9
+
+			#!/bin/bash
+			#
+			for j in {1..9}; do
+			    for i in $(seq 1 $j); do
+					echo -n -e "${i}X${j}=$[$i*$j]\t"
+			    done
+			    echo 
+			done
+4、bash之条件判断(选择执行):
+	if/then, case
+
+	if CONDITION; then
+		if-true-分支
+	fi
+
+	if CONDITION; then
+		if-true-分支
+	else
+		if-false-分支
+	fi
+
+	! CONDITION: 取反
+
+
+练习：写一个脚本
+	如果某路径不存在，则将其创建为目录；否则显示其存在，并显示内容类型；
+		#!/bin/bash
+		#
+		filename="/tmp/x/y/z/testdir"
+		if [ -e $filename ]; then
+		    echo "$filename exists."
+		    file $filename
+		else
+			mkdir -p $filename
+		fi
+
+
+5、脚本参数(位置参数变量):
+	# ./script.sh /etc/fstab /etc/grub2.cfg
+	  $0          $1          $2
+
+	位置参数变量：$1, $2, ...
+		${10}  两位数以上的变量要加“｛｝”
+
+	特殊变量：
+		$?: 命令的状态结果；
+		$#: 传递给脚本或函数的参数的个数；
+		$*和$@: 引用传递给脚本或函数的参数列表；
+
+	shift [n]：轮替
+		该功能可以实现变量多个赋值时轮流把参数赋值给变量。
+
+6、与用户交互：
+	1）read命令：
+		read [options] VAR...
+			-p "PROMPT"
+			-t timeout
+
+	示例：
+
+		#!/bin/bash
+		#
+
+		read -p "Plz enter a username: " -t 5 username
+
+		if [ -z "$username" ]; then
+			   username="myuser"
+		fi
+
+		if id $username &> /dev/null; then
+		    echo "$username exists."
+		else
+		    useradd $username
+		fi
+
+
+7、命令引用：
+	命令引用的书写方式：`COMMAND`, $(COMMAND)
+
+	引用命令的执行结果；
+
+	(1) ls `which cat`
+	(2) lines=$(wc -l /etc/fstab | cut -d' ' -f1)
+
+		#!/bin/bash
+		#
+		if [ -f $1 ]; then
+		     lines=$(wc -l $1 | cut -d' ' -f1)
+		     echo "$1 has $lines lines."
+		else
+		    echo "$1 not exists or not a file."
+		fi
+
+练习：写一个脚本，完成如下功能；
+	判断给定的两个数值，孰大孰小；
+		给定数值的方法：脚本参数，命令交互；
+
+		#!/bin/bash
+		#
+		read -p "Plz enter two integer: " -t 10 num1 num2
+
+		if [ -z "$num1" ]; then
+		    echo "Plz give two integers."
+		    exit 1
+		fi
+
+		if [ -z "$num2" ]; then
+		    echo "Plz give tow integers." 
+		    exit 1
+		fi
+
+		if [ $num1 -ge $num2 ]; then
+		    echo "Max: $num1, Min: $num2."
+		else
+		    echo "Max: $num2, Min: $num1."
+		fi
+
+7、特殊设备：
+	/dev/null: 空，bit buckets，吞下所有数据，并直接丢弃；
+	/dev/zero：吐出一堆0；

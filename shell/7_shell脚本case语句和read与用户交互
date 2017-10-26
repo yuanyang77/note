@@ -1,0 +1,125 @@
+case语句
+case语句：		该语句和if并无太大差别，主要作用是使代码的逻辑结构更清晰。
+case语句可以称为是：	简洁版的多分支if语句
+使用场景：		判断某变量的值是否为多种情形中的一种时使用
+
+case语句的用法格式为：
+
+case $VARIALBE in
+PATTERN1)
+分支1
+;;     <================注意：这两个分号不要忘记写，否则语法错误
+PATTERN2)
+分支2
+;;     <================注意：这两个分号不要忘记写，否则语法错误
+PATTERN3)
+分支3
+;;     <================注意：这两个分号不要忘记写，否则语法错误
+...
+*)
+分支n
+;;     <================注意：这两个分号不要忘记写，否则语法错误
+esac
+
+
+PATTERN可使用glob模式的通配符：
+	*  任意长度的任意字符
+	?  任意单个字符
+	[]  指定范围内的任意单个字符
+	a|b  多选1
+
+
+示例：提示键入任意一个字符；判断其类型；
+				#!/bin/bash
+				#
+				read -p "Plz enter a character: " char
+
+				case $char in
+				[a-z])
+				     echo "A character."
+				     ;;
+				[0-9])
+				     echo "A digit."
+				     ;;
+				*)
+				     echo "A special character."
+				     ;;
+				esac			
+
+示例：脚本可接受四个参数
+				start: 创建文件/var/lock/subsys/SCRIPT_NAME
+				stop: 删除此文件
+				restart: 删除此文件并重新创建
+				status: 如果文件存在，显示为"running"，否则，显示为"stopped"
+
+				#!/bin/bash
+				#
+				prog=$(basename $0)
+				lockfile="/var/lock/subsys/$prog"
+				#echo $lockfile
+
+				if [ $# -lt 1 ]; then
+				    echo "Usage: $prog start|stop|restart|status"
+				    exit 1
+				fi
+
+				case $1 in
+				start)
+				    if [ -f $lockfile ]; then
+						echo "$prog is started yet."
+				    else
+						touch $lockfile && echo "Starting $prog ok..." || echo "Starting $prog failed..."
+				    fi
+				    ;;
+				stop)
+				    if [ -f $lockfile ]; then
+						rm -f $lockfile && echo "Stop $prog ok...." || echo "Stop $prog failed..."
+				    else
+						echo "$prog is stopped yet."
+				    fi
+				    ;;
+				restart)
+				    if [ -f $lockfile ]; then
+						rm -f $lockfile && touch $lockfile && echo "Restarting $porg ok..."
+				    else
+						touch $lockfile && echo "$prog is stopped, Starting $prog ok...."
+				    fi
+				    ;;
+				status)
+				    if [ -f $lockfile ]; then
+						echo "Running..."
+				    else
+						echo "Stopped..."
+				    fi
+				    ;;
+				*)
+				    echo "Usage: $prog start|stop|restart|sttus"
+				    exit 1
+				esac
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+read语句
+read是bash的内建命令，可以与用户交互，将用户通过键盘输入的内容保存到一个变量中。
+
+read的用法格式：
+read[OPTIONS] VAR...
+	-P：键入显示给用户的提示信息
+	-t：等待时间
+
+示例：
+
+			#!/bin/bash
+			#
+
+			read -p "Plz enter a username: " -t 5 username
+
+			if [ -z "$username" ]; then
+			     username="myuser"
+			fi
+
+			if id $username &> /dev/null; then
+			    echo "$username exists."
+			else
+			    useradd $username
+			fi

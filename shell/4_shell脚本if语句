@@ -1,0 +1,108 @@
+if语句：
+1.单分支：
+	if CONDITION; then
+		if-true-分支
+	fi
+
+例：
+#!/bin/bash
+#
+if [ $# -lt 1 ]; then
+echo "Usage: $0 <path>"
+	    exit 1
+fi
+
+2.双分支：
+	if CONDITION; then
+		if-true-分支
+	else
+		if-false-分支
+	fi
+例：
+#!/bin/bash
+#
+filename="/tmp/x/y/z/testdir"
+if [ -e $filename ]; then
+	echo "$filename exists."
+	file $filename
+else
+	mkdir -p $filename
+fi
+
+3.多分支：
+	if CONDITION1; then
+		if-CONDITION1-true-分支
+	elif CONDTION2; then
+		if-CONDITIO2-true-分支
+	...
+	else
+		if-ALL-false-分支
+	fi
+
+例1：通过脚本参数传递一个文件路径给脚本，判断其类型；
+#!/bin/bash
+if [ -f $1 ]; then
+	echo "Rgular file."
+elif [ -d $1 ]; then
+	echo "Directory."
+elif [ -h $1 ]; then
+	echo "Symbolic link."
+elif [ -b $1 ]; then
+	echo "Block special."
+elif [ -c $1 ]; then
+	echo "Charactoer special."
+elif [ -S $1 ]; then
+	echo "Socket file."
+else
+	echo "file not exist or unknown type."
+fi
+
+
+
+例2：脚本可接受四个参数
+	start: 创建文件/var/lock/subsys/SCRIPT_NAME
+	stop: 删除此文件
+	restart: 删除此文件并重新创建
+	status: 如果文件存在，显示为"running"，否则，显示为"stopped"
+
+	basename命令：取得路径的基名；
+
+#!/bin/bash
+#
+prog=$(basename $0)
+lockfile="/var/lock/subsys/$prog"
+#echo $lockfile
+
+if [ $# -lt 1 ]; then
+	echo "Usage: $prog start|stop|restart|status"
+	exit 1
+fi
+
+if [ "$1" == "start" ]; then
+if [ -f $lockfile ]; then
+	echo "$prog is started yet."
+else
+	touch $lockfile && echo "Starting $prog ok..." || echo "Starting $prog failed..."
+fi
+elif [ "$1" == 'stop' ]; then
+if [ -f $lockfile ]; then
+	rm -f $lockfile && echo "Stop $prog ok...." || echo "Stop $prog failed..."
+else
+	echo "$prog is stopped yet."
+fi
+elif [ "$1" == 'restart' ]; then
+if [ -f $lockfile ]; then
+	rm -f $lockfile && touch $lockfile && echo "Restarting $porg ok..."
+else
+	touch $lockfile && echo "$prog is stopped, Starting $prog ok...."
+fi
+elif [ "$1" == 'status' ]; then
+if [ -f $lockfile ]; then
+	echo "Running..."
+else
+	echo "Stopped..."
+fi
+else
+	echo "Usage: $prog start|stop|restart|status"
+exit 1
+fi

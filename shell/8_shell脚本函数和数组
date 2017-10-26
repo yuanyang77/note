@@ -1,0 +1,193 @@
+函数和数组
+
+一、函数：
+function的功能：	
+		把一段具有独立功能代码封装在一起，并给予命名；
+		后续用到时，可直接通过给定函数名来调用整体代码；
+		模块化编程
+	功能：把脚本文件中的代码分隔为多段，放在不同的文件中
+		假设/root/bin/srv目录有两个文件：
+		(1) 函数文件
+		(2) 脚本文件
+
+函数作用：
+		1、代码重用；
+		2、模块化编程；
+		3、把相同的程序段定义成函数，可以减少程序代码量
+		4、增加程序的可读、易读性
+		4、实现程序的功能模块化
+
+		
+函数的使用方法：
+		先定义：编写函数代码
+		后调用：给出函数名，还可按需传递参数
+		
+		
+为脚本使用配置文件
+	一个文件中只定义变量
+	脚本文件source此变量定义的文件
+
+变量的作用域：
+	局部变量：
+		local VARIABLE=value
+
+存活时间：
+		函数执行开始，至函数返回结束；
+
+定义方法：
+	(1) function f_name (){
+			函数体
+		}
+
+	(2) f_name() {
+			函数体
+		}
+
+调用函数：
+		f_name [argu1, argu2, ...]
+
+	自定义函数状态返回值：
+		return [#]
+			0: 成功
+			1-255：失败
+	注意：函数代码执行时，一旦遇到return，函数代码终止运行，函数返回；
+
+示例：此前的服务脚本
+			#!/bin/bash
+			#
+			prog=$(basename $0)
+			lockfile="/var/lock/subsys/$prog"
+			#echo $lockfile
+
+			if [ $# -lt 1 ]; then
+			    echo "Usage: $prog start|stop|restart|status"
+			    exit 1
+			fi
+
+			start() {
+			    if [ -f $lockfile ]; then
+				echo "$prog is started yet."
+			    else
+				touch $lockfile && echo "Starting $prog ok..." || echo "Starting $prog failed..."
+			    fi
+			}
+
+			stop() {
+			    if [ -f $lockfile ]; then
+				rm -f $lockfile && echo "Stop $prog ok...." || echo "Stop $prog failed..."
+			    else
+				echo "$prog is stopped yet."
+			    fi
+			}
+
+			restart() {
+			    if [ -f $lockfile ]; then
+				rm -f $lockfile && touch $lockfile && echo "Restarting $porg ok..."
+			    else
+				touch $lockfile && echo "$prog is stopped, Starting $prog ok...."
+			    fi
+			}
+
+			status() {
+			    if [ -f $lockfile ]; then
+				echo "Running..."
+			    else
+				echo "Stopped..."
+			    fi
+			}
+
+			case $1 in
+			start)
+			    start 
+			    ;;
+			stop)
+			    stop
+			    ;;
+			restart)
+			    restart
+			    ;;
+			status)
+			    status
+			    ;;
+			*)
+			    echo "Usage: $prog start|stop|restart|sttus"
+			    exit 1
+			esac		
+
+示例：判断用户的ID号的奇偶性；
+			#!/bin/bash
+			#
+			evenid() {
+			    if [ $# -lt 1 ]; then
+					return 1
+			    fi
+
+			    if ! id $1 &> /dev/null; then 
+					return 2
+			    fi
+
+			    userid=$(id -u $1)
+			    if [ $[$userid%2] -eq 0 ]; then
+					echo "$1, Even user ID."
+			    else
+					echo "$1, Odd user ID."
+			    fi
+			}
+
+			evenid root
+
+			evenid 
+			echo $?
+
+			evenid rooooooooooooot
+			echo $?
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+数组：	连续的多个独立内存空间；每个内存空间相当于一个变量；
+所谓数组，就是相同数据类型的元素按一定顺序排列的集合，就是把有限个类型相同的变量
+用一个名字命名，然后用编号区分他们的变量的集合，这个名字称为数组名，编号称为数组下标。
+组成数组的各个变量称为数组的分量，也称为数组的元素，有时也称为下标变量。
+
+元素：		数组名[索引]
+传统数组：	索引为数字，从0开始编号；
+			declare -a ARRAY_NAME
+关联数组：	索引可以自定义，可以使用任意字符串做索引；
+			declare -A ARRAY_NAME
+
+支持稀疏格式
+
+数组元素的赋值方式：
+	(1) 一次只赋值一个元素
+		array[index]=value
+	(2) 一次赋值全部元素
+		array=("val1" "val2" ...)
+	(3) 指定索引进行赋值
+		array=([0]="val1" [3]="val2")
+	(4) read -a array
+
+数组定义：
+方法1： array=( value1 value2 value3 ...)
+方法2： array=([1]=one [2]=two [3]=three)
+方法3： array[0]=a array[1]=b array[2]=c
+方法4： array=($(COMMAND))
+
+长度：${#array[*]}, ${#array[@]}
+
+获取数组的长度：
+echo $(#array[*])
+echo $(#array[@])
+
+引用元素：${array[index]}
+
+打印数组元素：（数组元素从0开始计数）
+echo $(array[0])
+echo $(array[1])
+
+
+数组赋值：
+直接通过： 数组名[下标] 就可以对其进行引用赋值
+array[0]=value
+
+数组删除：
+直接通过：unset 数组[下标] 可以清除相应的元素，不带下标删除整个数组
