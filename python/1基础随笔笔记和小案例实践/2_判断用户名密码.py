@@ -1,3 +1,5 @@
+#! coding: utf-8
+#! 判断输入的用户名和密码是否正确
 import getpass
 _username = 'yy'
 _password = 'abc123'
