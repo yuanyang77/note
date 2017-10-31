@@ -17,5 +17,5 @@ while count <3:
         countine_confirm = input("do you want to keep guessing...?")
         if countine_confirm !='n':
             count = 0
-#else:
-#   print("you have trice too many times... godeby!!")
+else:
+  print("you have trice too many times... godeby!!")

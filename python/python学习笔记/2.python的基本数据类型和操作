@@ -1,0 +1,215 @@
+python的数据类型基本操作
+    number 数字
+    string 字符串
+    list   列表
+    tuple  元组
+    sets   集合
+    dictionary  字典
+
+1.字符串操作
+#1.字符串操作
+name = "my name is yy"
+
+print(name.capitalize())  # 首字母大写
+
+print(name.count("e"))  # 统计"e"这个字母在name变量中的字符串出现的次数
+
+print(name.center(50, "="))  # 打印50个字符，如果name这个变量中的字符串总个数不足50个，少出来的位置用“=”来填补，将name这个变量居中。
+
+print(name.ljust(50, '*'))  # 打印50个字符，如果name这个变量中的字符串总个数不足50个，少出来的位置用“=”来填补，但是不是讲name这个字符串居中，而是打印整个字符串，不够50个字符串的用“*"号填补。
+
+print(name.rjust(50, '-'))  # 这个和上面的相反,将整个字符串的占位打在右边，左边不足50个字符的用"-"填补
+
+print(name.endswith("jie"))  # 判断一个变量是否以“jie”这个字符串结尾，如果是就返回Ture
+
+name = "my \tname is yy"
+
+print(name)
+
+print(name.expandtabs(tabsize=50))  # 自定义tab的间隔打小，该处是指定tab的间隔是50个空格。
+
+print('yy'.find("e"))  # 在name这个字符串中查找含有name字样的索引，从左往右开始查找，将查找的第一个返回出来，也就是最靠左边的那个
+
+print('yy'.rfind('e'))  # 从左往右开始查找，将查找到的最靠右的匹配结果的索引取出来
+
+print(name[name.find("name"):])  # 字符串和列表都有相同的功能，都可以支持切片，比如这个例子就是取“n”这个字符后面的所有字符
+
+info = "I LOVE PLAY {A} and I love play {B}"
+
+print(info)
+
+print(info.format(A="ping-pong", B="basketball"))  # 以定义一个变量的形式传递一个参数到info的字符串中
+
+print(info.format_map({'A': 'football', 'B': 'volleyball'}))  # 以字典的形式传递一个参数到info的字符串中
+
+print('adA21'.isalnum())  # 判断前面的字符串是否仅仅包含[a-z][A-Z][0-9]
+
+print('adA'.isalpha())  # 判断前面的字符串仅仅包含[a-z][A-Z]
+
+print('1A'.isdecimal())  # 判断前面的数字是否是十六进制的数字
+
+print('2B'.isdigit())  # 判断该字符串是否是一个整数
+
+print('yy_1'.isidentifier())  # 判断是不是一个合法的标识符
+
+print('yy'.islower())  # 判断前面的字符串是否都是小写
+
+print('yy'.isupper())  # 判断前面的字符串是否都是大写
+
+print('696'.isnumeric())  # 判断该变量是否是一个十进制的数字
+
+print(' '.isspace())  # 判断前面的字符串是否是一个空格
+
+print('My Name Is yy'.istitle())  # 判断这个字符串的每个字母是否大写
+
+print('yy'.isprintable())  # 判断前面的字符串是否支持打印功能，一般字符串都是可以打印的。在linux中一切都是文件，一些tty，drive等终端文件是不能打印的，就可以用这个来判断，用途比较少
+
+print('+'.join(['1', '2', '3']))  # 将一个列表的信息追加到前面的字符串中
+
+print('yy'.lower())  # 将大写变成小写
+
+print('yy'.upper())  # 将小写变成大写
+
+print('\n yy'.lstrip())  # 只去掉左边的换行符或者空格
+
+print(' linghunbaidu \n '.rstrip())  # 只去掉左边和右边的换行符或者空格
+
+print(' yy \n'.strip())  # 去掉字符串左右两边的空格和换行符
+
+print('-----')
+
+passwd = str.maketrans("abclefghijklmnopqrstuvwxyz",
+                       '1234567890!@#$%^&*()_+-={}')  # 将前面的字符串后后面的数字和特殊字符一样匹配，对应的数字会转换成相应的字符。
+
+print("yy".translate(passwd))  # 将上面自定义的参数，合这里面的字符想对应，如果穿进去的参数没有对应的字符就不匹配。这个跟Linux的密码加密有点类似哟。
+
+print('yy'.replace('e', 'E', 2))  # 将字符串中的某个字符换成另外的一个字母或者数字（字符），后面可以匹配相应的次数，依次从左往右开始匹配。
+
+print('yy zheng jie'.split())  # 将字符串按照空格分成一个列表
+
+print('1+2+3+4+5'.split('+'))  # 用“+”作为分隔符，将其变成一个列表，如果不指定的话是以默认以空格分隔符的，例子如上
+
+print('yy'.swapcase())  # 将字符串中的大小写互换
+
+print('yy zheng jie'.title())  # 将以空格为分隔符的所有的小写字母变大写
+
+print('yy'.zfill(50))  # 总共需要打印50个字符，如果字符串不够的话前面用0占位
+
+#列表的使用
+
+names = ["蒲公英", "百合花", "玫瑰", "君子兰"]
+
+print(names)  # 取值整个列表
+
+print(names.index("百合花"))  # 查找出列表中的某个值所对应的索引ID
+
+print(names[names.index("百合花")])  # 根据列表中的索引ID返回所对应的值
+
+print(names[0])  # 取值第一个索引
+
+print(names[0], names[3])  # 取出第一个索引和第四个索引
+
+print(names[1:3])  # 从第二个索引开始取值，到第三个结束，改切片是顾头不顾尾
+
+print(names[-1])  # 取切片取值最后一个值,即倒着取
+
+print(names[-3:-1])  # 从倒数第三个开始取值，取到最后一个值。该切片也是顾头不顾尾哟
+
+print(names[-3:])  # 从倒数第三个数值开始取值，取到最后一个结束
+
+names.append("长江")  # 追加一个新的值，也就是插入末尾
+
+print(names)
+
+names.insert(1, "黄河")  #在列表的第一个索引处插入一个新的值，前面的数字表示索引的位置，后面是对应该索引的值
+
+print(names)
+
+names.remove("黄河")  # 删除值为“黄河”的值
+
+print(names)
+
+del names[1]  # 删除列表中第二个索引所对应的值
+
+print(names)
+
+names.pop(1)  # 删除第二个索引的值
+
+print(names)
+
+names.pop()  # 如果不加数字，默认删除最后一个数值
+
+print(names)
+
+names.clear()  # 清空列表
+
+print(names)
+
+numbles = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "!", "Alex", "#yin", "Zheng", "Jie"]
+
+print(numbles)
+
+numbles.reverse()  # 反转列表,就是讲列表的初始顺序调换一下
+
+print(numbles)
+
+strings = ["#yinzhengjie", "wudonghang", "shenjianyu", "!wusangui"]
+
+strings.reverse()
+
+print(strings)
+
+strings.sort()  # 自动按照accsis编码排序,特殊字符会优先排序
+
+print(strings)
+
+numbles.extend(strings)  # 扩展列表。可以将其他的列表追加到该列表来
+
+print(numbles, strings)
+
+print(strings)
+
+del strings  # 删除列表
+
+# print(strings)
+
+singer = ["yuanyang", "yy", "yancy", "linfan", "golang", ["python", "java"], ]
+singer_2 = singer.copy()  # 浅拷贝,只拷贝第一层的（即第一层的变量不包括子列表会被独立的开辟一块内存地址），如果列表里面镶嵌了子列表，那么第二层的列表里面的所有数值都会当成一个内存地址（即2个列表共用的同一个内存地址，都把内存指针指向了这个内存地址）
+print(singer)
+print(singer_2)
+singer[2] = "袁阳"
+singer[5][1] = "devops"
+print(singer)
+print(singer_2)
+actor = ["泰山", "衡山", "武当山", "峨眉山", "华山", ["天山", "昆仑山"]]
+import copy  # 导入模块，说道模块有个sys模块是c语音写的，所以我们在python的环境变量中是无法找到sys.py的模块的哟
+
+actor_2 = copy.deepcopy(actor)  # 导入copy模块，用这个模块的深度复制已达到完全的拷贝
+print(actor)
+print(actor_2)
+actor[4] = "huge"
+actor[5][1] = "canglao"
+print(actor)
+print(actor_2)
+for i in actor:  # 逐个打印列表的每个值
+    print(i)
+num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(num[0:-1:2])
+print(num[::2])  # 步长是2，空一格打印一个
+print(num[:])  # 如果省略了数字就默认以0开头以-1结尾（即从头到尾的打印）
+
+person = ["name", ["saving", 10000]]
+p1 = copy.copy(person)  # 扩展3中浅拷贝的方式
+p2 = person[:]
+p3 = list(person)
+print(p1)
+print(p2)
+print(p3)
+
+p1[0] = 'alxe'
+p2[0] = 'fengjie'
+p3[0] = 'wusanjiang'
+
+print(p1)
+print(p2)
+print(p3)
