@@ -289,7 +289,7 @@ hello world
 			2 - 变量 b 不在给定的列表中 list 中
 			3 - 变量 a 在给定的列表中 list 中
 
-	身份运算符
+	身份运算符：
 		is	is 是判断两个标识符是不是引用自一个对象	x is y, 类似 id(x) == id(y) , 如果引用的是同一个对象则返回 True，否则返回 False
 		is not	is not 是判断两个标识符是不是引用自不同对象	x is not y ， 类似 id(a) != id(b)。如果引用的不是同一个对象则返回结果 True，否则返回 False。
 		
@@ -327,7 +327,7 @@ hello world
 			3 - a 和 b 没有相同的标识
 			4 - a 和 b 没有相同的标识
 
-	运算符优先级
+	运算符优先级：
 		**	指数 (最高优先级)
 		~ + -	按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)
 		* / % //	乘，除，取模和取整除
@@ -366,7 +366,8 @@ hello world
 			(a + b) * (c / d) 运算结果为： 90.0
 			a + (b * c) / d 运算结果为： 50.0
 
-字符串
+字符串：
+	字符串是不能修改的，对其的修改操作实际上是在内存中另外开辟了一块地址，和之前的字符串没有关系了。
 	字符串操作：
 		name = "my name is yy"
 
@@ -544,13 +545,243 @@ hello world
 
 
 
-列表
-字典
-元组
-数组
-切片
+列表：
+	列表可以修改，列表可以嵌套列表，字符串，字典等任何东西。
+	names = ["袁阳","中国","湖北","襄阳"]
 
-条件语句
+	#查
+	print(names)    #取值整个列表
+	print(names.index("湖北"))    #查找出列表中的某个值所对应的索引ID
+	print(names[names.index("襄阳")])     #根据列表中的索引ID返回所对应的值
+	print(names[0])     #取值第一个索引
+	print(names[0],names[3])    #取出第一个索引和第四个索引
+	print(names[1:3])           #从第二个索引开始取值，到第三个结束，切片不包含最后一个元素，俗称顾头不顾尾
+	print(names[-1])            #取切片取值最后一个值,即倒着取
+	print(names[-3:-1])         #从倒数第三个开始取值，取到最后一个值。该切片同样不包含最后一个元素
+	print(names[-3:])           #从倒数第三个数值开始取值，取到最后一个结束
+
+	#增
+	names.append("叶兰")         #追加一个新的值，也就是插入末尾
+	print(names)
+	names.insert(1,"深圳")        #在列表的第一个索引处插入一个新的值，前面的数字表示索引的位置，后面是对应该索引的值
+	print(names)
+
+	#删
+	names.remove("叶兰")          #删除值为"叶兰"的值
+	print(names)
+	del names[1]                #删除列表中第二个索引所对应的值
+	print(names)
+	names.pop()                 #如果不加数字，默认删除最后一个数值
+	print(names)
+	names.pop(1)                #删除第二个索引的值
+	print(names)
+	names.clear()               #清空列表
+	print(names)
+	# del names                   #删除整个列表
+
+
+	numbers = [0,1,2,3,4,5,6,7,8,9,"!","yancy","yy","yuanyang","yelan"]
+	print(numbers)
+	numbers.reverse()            #反转列表,就是讲列表的初始顺序调换一下
+	print(numbers)
+
+	nums = [5,1,3,2,4,9,7,0,8,6]
+	nums.sort()                 #排序
+	print(nums)
+
+
+	strings = ["yancy","yy","yuanyang","yelan"]
+	print(strings)
+	strings.reverse()
+	print(strings)
+	strings.sort()           #自动按照accsis编码排序,特殊字符会优先排序,注意:字符串不能和数字一起排序，会报错
+	print(strings)
+
+	numbers.extend(strings)  #扩展列表。可以将其他的列表追加到该列表来.这个表示把string列表增加到numbers列中来
+	print(numbers)
+
+
+	str1 = ["aa","bb","yy","cc",["yuanyang","yelan"]]
+	str2 = str1.copy()      #浅拷贝,只拷贝第一层的（即第一层的变量不包括子列表会被独立的开辟一块内存地址），如果列表里面镶嵌了子列表，那么第二层的列表里面的所有数值都会当成一个内存地址（即2个列表共用的同一个内存地址，都把内存指针指向了这个内存地址）
+	print(str1)
+	print(str2)
+	str1[0] = "啊啊"          #修改第一个元素为汉字
+	str2[4][1] = "叶兰"       #修改第4个元素的第一个元素为汉字
+	print(str1)
+	print(str2)
+
+
+	import sys
+	import copy                 #导入模块，说道模块有个sys模块是c语音写的，所以我们在python的环境变量中是无法找到sys.py的模块的
+	address_1 = ["北京","上海","广东","湖北","湖南",["袁阳","叶兰"]]
+	# address_2 = copy.deepcopy(address_1)     #导入copy模块，用这个模块的深度复制已达到完全的拷贝
+	print(address_1)
+	# print(address_2)
+	address_1[0] = "beijing"
+	# address_2[5][1] = "yy"
+	print(address_1)
+	# print(address_2)
+
+	for i in address_1:
+	    print(i)
+
+	num = [1,2,3,4,5,6,7,8,9]
+	print(num[0:-1:2])          #打印从第一个元素到倒数第一个元素，即所有元素，并空一格打印一个
+	print(num[::2])             #打印所有，并空一格打印一个
+	print(num[:])               #如果省略了数字就默认以0开头以-1结尾（即从头到尾的打印）
+	print(num[::])              #同上
+
+
+	person = ["name",["saving",10000]]
+	p1 = copy.copy(person)  #扩展中浅拷贝的方式
+	p2 = person[:]
+	p3 = list(person)
+	print(p1)
+	print(p2)
+	print(p3)
+
+	p1[0] = "yy"
+	p2[0] = "yancy"
+	p3[0] = "yuanyang"
+	print(p1)
+	print(p2)
+	print(p3)
+
+
+
+
+
+
+字典:
+    字典是无序的，所以不能用index来查，字典的key唯一的，不能重复。
+	# 定义一个字典
+	info = {'name':'yy',
+	        'heigh':'175',
+	        'sex':'man',
+	        'hobby':'bike'
+	        }
+
+	#查  字典是无序的，所以不能用index来查
+	print(info.values())    #打印该字典的所有的value的值
+	print(info.keys())      #打印该字典的所有的keys值
+	print(info)             #打印字典中的所有内容
+	print(info.get('name')) #查找key名称是name所对应的value,如果有就返回其所对应的value,如果没有的话就不输出
+	print("address" in info) # 判断info这个字典中是否有adress这个key,如果没有就返回False，如果有就返回Ture，在python2.7中还可以这么写：info.has_key("adress")
+
+	print(info.setdefault("name2","yancy")) #该方法可以去取该字典是否存name这个值，如果存在就会返回后面定义的值，如果不存在就回新建一个key值对
+	print(info)
+
+	info.setdefault("place","湖北")       #该方法可以去字典去取相应的Key（place）值，如果没有取到(就说明没有定义这个key)，也就是新建一个新的key值
+	print(info)
+
+	#改
+	info['name'] = "袁阳"     #修改一个字典中的一个key所对应的value值
+	print(info)
+	info['age'] = '25'      #如果该字典没有对应的key，就是新增了一个key信息
+	print(info)
+
+
+	#删
+	del info["name"]        # 删除该字典中的name这个key
+	print(info)
+	info.pop("sex")         #删除该字典中的heigh
+	print(info)
+	info.popitem()          #随机删除该字典的一个Key信息
+	print(info)
+
+
+	#其他
+	a = {
+	'hobby':'bike',
+	'name' : 'yancy',
+	'age':'25'
+	}
+	b = {
+	'hobby':'ping-pong',
+	1:100,
+	2:200
+	}
+
+	a.update(b)         ##该方法可以将另外一个字典中的key和value更新到这个字典中，如果出现想用的key的话会用后面的字典中的value进行现有的value.
+	print(a)
+
+	c = dict.fromkeys([1,2,2,3,3,4,4],[444,{"name":"yancy"},555])   #这里面有2个列表，会自动将前面的列表去重并将去重后的每一个元素生成一个字典中所对应的key.然后将后面的列表当成一个内存地址同时赋值给没有key的元素
+	print(c)
+
+	c[3][1]["name"] = "叶兰"  #如果通过fromkeys定义生成的字典，修改其中任意一个key的值，那么所有的key的value都会跟着变化的.
+	print(c)
+
+	# for i in info:          #循环打印字典中的没有个key和value
+	#     print(i,info[i])
+
+	for k,v in info.items():    #这个循环会将字典先转换成一个列表，然后再打印出来，如果数据量较小的话和上面的循环的方法差不多，数据量大的时候不要使用
+	    print(k,v)
+
+
+元组：
+	元组一经定义不能修改，所以它只有查询的操作
+	names = ("yy","yuanyang","linfan","yancy") #定义一个元组，元组支持的方法列表都支持而且元组仅仅支持两种方法
+	print(names)
+	print(names.count("yancy"))     ##统计字符串在该列表出现的次数,注意：不能把元素中的单个字母拿出来找，要找的字符串必须存在于元素中。
+	print(names.index("yancy"))     #超照列表中的某个值所对应的索引ID，这个ID会和第一项匹配，如果出现了就直接匹配出来不会继续往下查找了
+
+集合：
+	集合是两个列表之间的关系表达式
+	list_1 = [1,3,4,2,1,1,4,5,7,8,9]
+	list_1 =  set(list_1)                   #定义一个集合，集合天去重，不会有重复的元素
+	print(list_1,type(list_1))
+
+	list_2 = set([2,3,1,3,10,7,444,333])
+	print(list_1,list_2)
+
+	#交集
+	print(list_1.intersection(list_2))
+	print(list_1 & list_2)
+
+	#并集
+	print(list_1.union((list_2)))
+	print(list_1 | list_2)
+
+	#差集   一个里面有，另一个里面没有的集
+	print(list_1.difference(list_2))    #in list_1 but not in list_2
+	print(list_2.difference(list_1))    #in list_2 but not in list_1
+	print(list_1 - list_2)              ##in list_1 but not in list_2
+
+
+	#子集
+	list_3 = set([1,2])
+
+	print(list_1.issubset(list_2))      #list_1是不是list_2的子集,返回为False
+	print(list_1.issuperset(list_2))    #list_1是不是list_2的父集,返回为False
+
+	print(list_3.issubset(list_1))      #list_3是不是list_1的子集,返回为True
+	print(list_1.issuperset(list_3))    #list_1是不是list_3的父集,返回为True
+
+	#对称差集   去掉两个集合中的交集后，即去除大家都有的数据，保留一个月，另一个没有的数据。
+	print(list_1.symmetric_difference(list_2))
+	print(list_1 ^ list_2)
+
+	#增
+	list_1.add(777)     #在list_1中添加777
+	print(list_1)
+	list_1.update([100,200,300])    #添加多个元素
+	print(list_1)
+
+	#查
+	# 100 in list_1           #判断100在不在list_1这个集合里
+	# 200 not in list_1       #判断200是不是不在list_1这个集合里
+	print(len(list_1))         #查询列表长度
+
+	#改
+	list_1.copy()     #浅复制
+
+	#删
+	list_1.remove(100)          #删除指定的元素
+	print(list_1,"-----")
+	print(list_1.pop())         #随即删除一个元素，并返回删除的元素
+	list_1.discard(77)          #discard删除，有就删除，没有也不会报错
+
+条件语句：
 	if  表达式 ：
 		代码
 
@@ -710,3 +941,7 @@ hello world
 			当前字母 : o
 			当前字母 : b
 			Good bye!
+
+标准库和第三方库
+	标准库：Python自带的库，不用额外安装，一般放在python安装目录下的lib目录下。注意：不要在项目目录里建立一个和标准库的名字相同的文件名，不然在引用标准库的时候系统会默认把这个文件当做自己写的库引用。
+	第三方库：需要额外安装，一般放在python安装目录下的Lib\site-packages下。
