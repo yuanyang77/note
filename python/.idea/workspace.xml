@@ -13,7 +13,7 @@
     <SUITE FILE_PATH="coverage/python$test.coverage" NAME="test Coverage Results" MODIFIED="1509549039521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
     <SUITE FILE_PATH="coverage/python$__list2.coverage" NAME="__list2 Coverage Results" MODIFIED="1509550060916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
     <SUITE FILE_PATH="coverage/python$copy.coverage" NAME="copy Coverage Results" MODIFIED="1509527293716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
-    <SUITE FILE_PATH="coverage/python$.coverage" NAME="文件操作 Coverage Results" MODIFIED="1509628885436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
+    <SUITE FILE_PATH="coverage/python$.coverage" NAME="字符编码 Coverage Results" MODIFIED="1509710237615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
     <SUITE FILE_PATH="coverage/python$shopping.coverage" NAME="shopping Coverage Results" MODIFIED="1509597246314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2/课后练习" />
     <SUITE FILE_PATH="coverage/python$tuple.coverage" NAME="tuple Coverage Results" MODIFIED="1509549750136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
     <SUITE FILE_PATH="coverage/python$sys_mod.coverage" NAME="sys_mod Coverage Results" MODIFIED="1509549181775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day1" />
@@ -39,61 +39,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shopping.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day2/shopping.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shopping.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day2/课后练习/shopping.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dict.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day2/课后练习/dict.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="集合操作.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day2/集合操作.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="1120">
+              <caret line="56" column="37" lean-forward="false" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="文件操作.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="文件操作.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day2/文件操作.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="498">
+              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="yesterday" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day2/yesterday">
+      <file leaf-file-name="文件修改.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2/文件修改.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+            <state relative-caret-position="500">
+              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="字符编码.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day2/字符编码.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filetest.back" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2/filetest.back">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filetest3" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2/filetest3">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filetest" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2/filetest">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filetest2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2/filetest2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -102,46 +122,36 @@
       <file leaf-file-name="python基础语法.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python学习笔记/python基础语法.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="565" column="34" lean-forward="false" selection-start-line="565" selection-start-column="34" selection-end-line="565" selection-end-column="34" />
+            <state relative-caret-position="-620">
+              <caret line="581" column="16" lean-forward="false" selection-start-line="581" selection-start-column="16" selection-end-line="581" selection-end-column="16" />
               <folding>
-                <marker date="1509627174710" expanded="true" signature="18403:18443" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="18490:18902" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="18567:18618" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="18770:18902" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="18991:19083" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="19202:19311" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="19319:19429" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="19443:19525" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="19577:19820" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="19654:19705" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="19896:19955" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="20003:20059" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="20073:20113" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="20156:20454" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="20270:20321" ph="..." />
-                <marker date="1509627174710" expanded="true" signature="20540:20583" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="11516:11605" ph="'''...'''" />
+                <marker date="1509710975108" expanded="true" signature="11663:11766" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1509710975108" expanded="true" signature="11894:11992" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                <marker date="1509710975108" expanded="true" signature="14849:14941" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="15823:15873" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="15881:15920" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="16275:16346" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="17826:17926" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="25954:25994" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="26041:26453" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="26118:26169" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="26321:26453" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="26542:26634" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="26753:26862" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="26870:26980" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="26994:27076" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="27128:27371" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="27205:27256" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="27447:27506" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="27554:27610" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="27624:27664" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="27707:28005" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="27821:27872" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="28091:28134" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="28341:28440" ph="..." />
+                <marker date="1509710975108" expanded="true" signature="28366:28409" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tuple操作.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day2/tuple操作.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="copy_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day2/copy_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -179,11 +189,17 @@
         <option value="$PROJECT_DIR$/day2/dict操作.py" />
         <option value="$PROJECT_DIR$/day2/__list.py" />
         <option value="$PROJECT_DIR$/day2/课后练习/shopping.py" />
-        <option value="$PROJECT_DIR$/python学习笔记/python基础语法.py" />
         <option value="$PROJECT_DIR$/day2/课后练习/dict.py" />
         <option value="$PROJECT_DIR$/day2/集合.py" />
+        <option value="$PROJECT_DIR$/day2/yesterday2" />
         <option value="$PROJECT_DIR$/day2/yesterday" />
+        <option value="$PROJECT_DIR$/python学习笔记/python基础语法.py" />
+        <option value="$PROJECT_DIR$/day2/filetest3.py" />
+        <option value="$PROJECT_DIR$/day2/filetest" />
+        <option value="$PROJECT_DIR$/day2/filetest.back" />
+        <option value="$PROJECT_DIR$/day2/文件修改.py" />
         <option value="$PROJECT_DIR$/day2/文件操作.py" />
+        <option value="$PROJECT_DIR$/day2/字符编码.py" />
       </list>
     </option>
   </component>
@@ -194,8 +210,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="943" />
-    <option name="width" value="977" />
+    <option name="x" value="957" />
+    <option name="y" value="10" />
+    <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -233,7 +250,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,6 +271,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,7 +297,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.文件操作">
+  <component name="RunManager" selected="Python.字符编码">
     <configuration name="集合" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -317,7 +334,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="__list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="文件操作" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -330,12 +347,12 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day2/__list.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day2/文件操作.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="dict操作" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="文件修改" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -348,7 +365,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day2/dict操作.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day2/文件修改.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="字符编码" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day2/字符编码.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -408,19 +443,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.dict操作" />
-      <item index="1" class="java.lang.String" itemvalue="Python.__list" />
-      <item index="2" class="java.lang.String" itemvalue="Python.shopping" />
-      <item index="3" class="java.lang.String" itemvalue="Python.集合" />
-      <item index="4" class="java.lang.String" itemvalue="Python.文件操作" />
+      <item index="0" class="java.lang.String" itemvalue="Python.shopping" />
+      <item index="1" class="java.lang.String" itemvalue="Python.集合" />
+      <item index="2" class="java.lang.String" itemvalue="Python.文件操作" />
+      <item index="3" class="java.lang.String" itemvalue="Python.文件修改" />
+      <item index="4" class="java.lang.String" itemvalue="Python.字符编码" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.文件操作" />
-        <item index="1" class="java.lang.String" itemvalue="Python.集合" />
-        <item index="2" class="java.lang.String" itemvalue="Python.shopping" />
-        <item index="3" class="java.lang.String" itemvalue="Python.__list" />
-        <item index="4" class="java.lang.String" itemvalue="Python.dict操作" />
+        <item index="0" class="java.lang.String" itemvalue="Python.字符编码" />
+        <item index="1" class="java.lang.String" itemvalue="Python.文件修改" />
+        <item index="2" class="java.lang.String" itemvalue="Python.文件操作" />
+        <item index="3" class="java.lang.String" itemvalue="Python.集合" />
+        <item index="4" class="java.lang.String" itemvalue="Python.shopping" />
       </list>
     </recent_temporary>
   </component>
@@ -441,26 +476,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="943" y="0" width="977" height="1040" extended-state="0" />
+    <frame x="957" y="10" width="960" height="1040" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23009814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27128264" sideWeight="0.5044444" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27128264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27128264" sideWeight="0.49555555" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3986095" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984109" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3141593" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31328037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -472,6 +508,9 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -479,90 +518,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day2/课后练习/dict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1206">
-          <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day1/sys_mod.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/__list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/list操作.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="85" column="13" lean-forward="false" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#61#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/dict操作.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="51" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/shopping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python学习笔记/python基础语法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509627174710" expanded="true" signature="18403:18443" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18490:18902" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18567:18618" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18770:18902" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18991:19083" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19202:19311" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19319:19429" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19443:19525" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19577:19820" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19654:19705" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19896:19955" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20003:20059" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20073:20113" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20156:20454" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20270:20321" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20540:20583" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day2/string.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -582,7 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -611,7 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -620,22 +578,32 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1509627174710" expanded="true" signature="18403:18443" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18490:18902" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18567:18618" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18770:18902" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18991:19083" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19202:19311" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19319:19429" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19443:19525" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19577:19820" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19654:19705" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19896:19955" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20003:20059" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20073:20113" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20156:20454" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20270:20321" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20540:20583" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="11516:11605" ph="'''...'''" />
+            <marker date="1509710975108" expanded="true" signature="11663:11766" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1509710975108" expanded="true" signature="11894:11992" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1509710975108" expanded="true" signature="14849:14941" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="15823:15873" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="15881:15920" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="16275:16346" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="17826:17926" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="25954:25994" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26041:26453" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26118:26169" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26321:26453" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26542:26634" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26753:26862" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26870:26980" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26994:27076" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27128:27371" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27205:27256" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27447:27506" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27554:27610" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27624:27664" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27707:28005" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27821:27872" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="28091:28134" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="28341:28440" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="28366:28409" ph="..." />
           </folding>
         </state>
       </provider>
@@ -787,7 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,7 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,13 +769,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day2/copy_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="400">
           <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding />
         </state>
@@ -817,7 +782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day2/shopping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="860">
           <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
           <folding />
         </state>
@@ -825,40 +790,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day2/课后练习/shopping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="500">
           <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python学习笔记/python基础语法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="565" column="34" lean-forward="false" selection-start-line="565" selection-start-column="34" selection-end-line="565" selection-end-column="34" />
-          <folding>
-            <marker date="1509627174710" expanded="true" signature="18403:18443" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18490:18902" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18567:18618" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18770:18902" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="18991:19083" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19202:19311" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19319:19429" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19443:19525" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19577:19820" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19654:19705" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="19896:19955" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20003:20059" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20073:20113" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20156:20454" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20270:20321" ph="..." />
-            <marker date="1509627174710" expanded="true" signature="20540:20583" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day2/课后练习/dict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="1920">
           <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding />
         </state>
@@ -876,24 +816,109 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day2/集合操作.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="1120">
+          <caret line="56" column="37" lean-forward="false" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day2/yesterday">
+    <entry file="file://$PROJECT_DIR$/day2/yesterday2" />
+    <entry file="file://$PROJECT_DIR$/day2/yesterday" />
+    <entry file="file://$PROJECT_DIR$/python学习笔记/python基础语法.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+        <state relative-caret-position="-620">
+          <caret line="581" column="16" lean-forward="false" selection-start-line="581" selection-start-column="16" selection-end-line="581" selection-end-column="16" />
+          <folding>
+            <marker date="1509710975108" expanded="true" signature="11516:11605" ph="'''...'''" />
+            <marker date="1509710975108" expanded="true" signature="11663:11766" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1509710975108" expanded="true" signature="11894:11992" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1509710975108" expanded="true" signature="14849:14941" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="15823:15873" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="15881:15920" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="16275:16346" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="17826:17926" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="25954:25994" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26041:26453" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26118:26169" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26321:26453" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26542:26634" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26753:26862" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26870:26980" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="26994:27076" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27128:27371" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27205:27256" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27447:27506" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27554:27610" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27624:27664" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27707:28005" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="27821:27872" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="28091:28134" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="28341:28440" ph="..." />
+            <marker date="1509710975108" expanded="true" signature="28366:28409" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/filetest2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/filetest3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/filetest3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/filetest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/filetest.back">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/文件修改.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day2/文件操作.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="498">
+          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/字符编码.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding />
         </state>
       </provider>
