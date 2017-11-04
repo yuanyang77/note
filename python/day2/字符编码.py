@@ -32,3 +32,4 @@ print(msg)
 print(msg_gb2312)
 print(gb2312_to_unicode)
 print(gb2312_to_utf8)
+
