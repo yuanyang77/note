@@ -1198,10 +1198,16 @@ hello world
 
 	6.不固定参数和参数组
 	  *args:
-	  	*args 会把多传入的参数变成一个元组形式
+	  	*args 会把多传入的位置参数变成一个元组形式
+	  	def b(name,*args):
+		    print(name,args)
+		b('yy',1,2,3,4,5,'yancy','linfan')
 
 	  **kwargs:   
-	  	*kwargs 会把多传入的参数变成一个dict形式,#接受N个关键字参数，转换成字典的方式,传递的参数相当于key和value
+	  	*kwargs 会把多传入的关键字参数变成一个dict形式,#接受N个关键字参数，转换成字典的方式,传递的参数相当于key和value
+	  	def h(name,**kwargs):
+		    print(name,kwargs)
+		h('yy',a=13,b=15,c='yancy')
 
 	7.全局变量和局部变量
 		在子程序中定义的变量称为局部变量，在程序的一开始定义的变量称为全局变量。
