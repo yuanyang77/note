@@ -20,7 +20,7 @@ print(name.ljust(50, '*'))  # 打印50个字符，如果name这个变量中的�
 
 print(name.rjust(50, '-'))  # 这个和上面的相反,将整个字符串的占位打在右边，左边不足50个字符的用"-"填补
 
-print(name.endswith("jie"))  # 判断一个变量是否以“jie”这个字符串结尾，如果是就返回Ture
+print(name.endswith("yy"))  # 判断一个变量是否以“jie”这个字符串结尾，如果是就返回Ture
 
 name = "my \tname is yy"
 
